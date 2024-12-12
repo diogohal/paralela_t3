@@ -1,21 +1,26 @@
-CC = gcc
+# Variáveis de compilador e flags
+CC = mpicc
 CFLAGS = -Wall -O2
 LDFLAGS = -lpthread
 
 # Nome do executável
-all: main
+EXEC = main
+
+# Fontes e objetos
+SRCS = main.c verifica_particoes.c
+OBJS = $(SRCS:.c=.o)
+
+# Regra principal (default)
+all: $(EXEC)
 
 # Regra para compilar o executável
-main: main.o verifica_particoes.o
-	$(CC) $(CFLAGS) -o main main.o verifica_particoes.o $(LDFLAGS)
+$(EXEC): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-# Regra para compilar main.o
-main.o: main.c verifica_particoes.h
-	$(CC) $(CFLAGS) -c main.c
+# Regra genérica para compilar arquivos .c em .o
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-# Regra para compilar verifica_particoes.o
-verifica_particoes.o: verifica_particoes.c verifica_particoes.h
-	$(CC) $(CFLAGS) -c verifica_particoes.c
-
+# Limpeza dos arquivos gerados
 clean:
-	rm *.o main
+	rm -f $(OBJS) $(EXEC)
