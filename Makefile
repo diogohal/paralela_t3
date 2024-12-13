@@ -1,13 +1,12 @@
 # Variáveis de compilador e flags
 CC = mpicc
 CFLAGS = -Wall -O2
-LDFLAGS = -lpthread
 
 # Nome do executável
 EXEC = main
 
 # Fontes e objetos
-SRCS = main.c verifica_particoes.c
+SRCS = main.c verifica_particoes.c chrono.c
 OBJS = $(SRCS:.c=.o)
 
 # Regra principal (default)
