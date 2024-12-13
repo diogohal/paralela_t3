@@ -1,0 +1,37 @@
+-----------------------------------
+-----------------------------------
+-----------------------------------
+---------- ATENCAO: usar --exclusive na linha de comando
+-----------------------------------
+/var/spool/slurmd/job14726/slurm_script rodando no host  wz11
+SLURM_JOB_NAME:  mpihello_job
+SLURM_NODELIST:  wz11
+SLURM_JOB_NODELIST:  wz11
+SLURM_JOB_CPUS_PER_NODE:  8
+Tempo médio: 0.069191 s
+Vazão: 115.621404 MEPS/s
+Tempo médio: 0.065890 s
+Vazão: 121.413683 MEPS/s
+Tempo médio: 0.069984 s
+Vazão: 114.312351 MEPS/s
+Tempo médio: 0.075765 s
+Vazão: 105.590221 MEPS/s
+Tempo médio: 0.093496 s
+Vazão: 85.565572 MEPS/s
+Tempo médio: 0.073231 s
+Vazão: 109.243620 MEPS/s
+Tempo médio: 0.090638 s
+Vazão: 88.263140 MEPS/s
+Tempo médio: 0.079306 s
+Vazão: 100.875314 MEPS/s
+Tempo médio: 0.092809 s
+Vazão: 86.198528 MEPS/s
+Tempo médio: 0.102038 s
+Vazão: 78.402183 MEPS/s
+O tempo total dessa shell foi de 17 segundos
+SLURM_JOB_NAME:  mpihello_job
+SLURM_NODELIST:  wz11
+SLURM_JOB_NODELIST:  wz11
+SLURM_JOB_CPUS_PER_NODE:  8
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             14726     debug mpihello   nobody  R       0:17      1 wz11
